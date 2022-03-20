@@ -4,7 +4,7 @@
 
 > Sharing is caring, but sometimes there are too many small projects that don't seem useful at first glance.
 > 
-> Posticum is a one of these small projects created by a supposed sysadmin called Bakdyr. It appears suspicious... Can you look into it ?
+> Posticum is a one of these projects created by a supposed sysadmin called Bakdyr. It appears suspicious... Can you look into it ?
 
 **Hints** are everywhere ! Bruteforce and specialized tools won't help you here.
 
