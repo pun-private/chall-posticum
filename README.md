@@ -2,7 +2,7 @@
 
 # Chall-Posticum
 
-> Sharing is caring, but sometimes they are too many small projects that don't seem useful at first glance.
+> Sharing is caring, but sometimes there are too many small projects that don't seem useful at first glance.
 > 
 > Posticum is a one of these small projects created by a supposed sysadmin called Bakdyr. It appears suspicious... Can you look into it ?
 
