@@ -89,60 +89,12 @@ window.addEventListener("load", function() {
           elts[i].className = 'hljs-comment';
       }
   }
+  var elts = document.getElementsByClassName('language-javascript');
+  elts[0].innerHTML = elts[0].innerHTML.replace(' ,<span class="hljs-comment">\'cu', '<span class="hljs-comment"> ,</span><span class="hljs-comment">\'cu');
+  elts[0].innerHTML = elts[0].innerHTML.replace('us\'</span> , ', 'us\'</span><span class="hljs-comment"> , </span>');
+
 });
-/*
-//in page scrolling for documentaiton page
-var btns = getAll('.js-btn');
-var sections = getAll('.js-section');
 
-function setActiveLink(event) {
-  // remove all active tab classes
-  for (var i = 0; i < btns.length; i++) {
-    btns[i].classList.remove('selected');
-  }
-
-  event.target.classList.add('selected');
-}
-
-function smoothScrollTo(i, event) {
-  var element = sections[i];
-  setActiveLink(event);
-
-  window.scrollTo({
-    'behavior': 'smooth',
-    'top': element.offsetTop - 20,
-    'left': 0
-  });
-}
-
-if (btns.length && sections.length > 0) {
-  for (var i = 0; i<btns.length; i++) {
-    btns[i].addEventListener('click', smoothScrollTo.bind(this,i));
-  }
-}
-
-// fix menu to page-top once user starts scrolling
-window.addEventListener('scroll', function () {
-  var docNav = get('.doc__nav > ul');
-
-  if( docNav) {
-    if (window.pageYOffset > 63) {
-      docNav.classList.add('fixed');
-    } else {
-      docNav.classList.remove('fixed');
-    }
-  }
-});
-*/
 // responsive navigation
 var topNav = get('.menu');
 var icon = get('.toggle');
-
-var elts = document.getElementsByClassName('hljs-string');
-for (var i = 0; i < elts.length; ++i) {
-    if (elts[i].innerHTML.includes('tmp')) {
-        elts[i].className = 'hljs-comment';
-        //console.log(elts[i].innerHTML);
-    }
-}
-
