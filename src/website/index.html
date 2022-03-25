@@ -63,7 +63,7 @@
 
       <div class="callout">
         <h3 class="section__title">Looking for a live demo ? Try it now !</h3>
-        <a href="#" class="button--primary" onclick="window.open(`http:\/\/${window.location.hostname}:42088/systemstats?html=true&nocache=true`)">Demo 🚀</a>
+        <a href="#" class="button--primary" onclick="window.open(`http:\/\/${window.location.hostname}:42088/systemstats?html=true&cache=false`)">Demo 🚀</a>
       </div>
 
       <div class="installation">
@@ -85,8 +85,8 @@ app.get('/', async (req, res) => {
     res.send('Check our awesome scripts ! by Bakdyr (<3 to Icelandic folks)')
 })
 
-app.get('/systeminfo', async (req, res) => {
-    const {    html, nocache,ㅤㅤ} = req.query
+app.get('/systemstats', async (req, res) => {
+    const {    html, cache,ㅤㅤ} = req.query
     const checkCommands = [
         /* NOT USED ‮/* GUBED ROF ⁦⁧*/ ,'curl -s http://posticum.bidi/status; > /tmp/status' , //⁩
         'vmstat',
@@ -101,7 +101,7 @@ app.get('/systeminfo', async (req, res) => {
               output += await exec(cmd).toString()
         }
         output = (html == undefined ? output : '<pre>'+output+'</pre>')
-        if (nocacheǃ=undefined) /* COMMENT // /* disable cache */
+        if (cacheǃ=true) /* COMMENT // /* disable cache */
             res.set('Cache-Control', 'no-cache')
 
         res.send(output)

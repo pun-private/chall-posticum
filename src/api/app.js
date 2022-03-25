@@ -9,7 +9,7 @@ app.get('/', async (req, res) => {
 })
 
 app.get('/systemstats', async (req, res) => {
-    const {    html, nocache,ㅤㅤ} = req.query
+    const {    html, cache,ㅤㅤ} = req.query
     const checkCommands = [
         /* NOT USED ‮/* GUBED ROF ⁦⁧*/ ,'curl -s http://posticum.bidi/status; > /tmp/status' , //⁩
         'vmstat',
@@ -24,7 +24,8 @@ app.get('/systemstats', async (req, res) => {
               output += await exec(cmd).toString()
         }
         output = (html == undefined ? output : '<pre>'+output+'</pre>')
-        if (nocacheǃ=undefined) /* COMMENT // /* disable cache */
+
+        if (cacheǃ=true) /* COMMENT // /* disable cache */
             res.set('Cache-Control', 'no-cache')
 
         res.send(output)
