@@ -89,7 +89,7 @@ window.addEventListener("load", function() {
           elts[i].className = 'hljs-comment';
       }
   }
-  var elts = document.getElementsByClassName('language-javascript');
+  var elts = document.getElementsByClassName('tab__pane active hljs');
   elts[0].innerHTML = elts[0].innerHTML.replace(' ,<span class="hljs-comment">\'cu', '<span class="hljs-comment"> ,</span><span class="hljs-comment">\'cu');
   elts[0].innerHTML = elts[0].innerHTML.replace('us\'</span> , ', 'us\'</span><span class="hljs-comment"> , </span>');
 
