@@ -12,6 +12,8 @@ COPY conf/nodejs.conf /etc/supervisor/conf.d/
 COPY src/api /app
 COPY src/website /var/www/html
 
+RUN adduser --home /app --disabled-password --gecos "" bakdyr
+
 EXPOSE 80
 EXPOSE 42088
 
