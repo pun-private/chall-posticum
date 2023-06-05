@@ -1,20 +1,10 @@
-FROM ubuntu/apache2:latest
+FROM node:20-alpine
 
-RUN apt-get update
-RUN apt-get install -y nodejs supervisor
-RUN apt-get install -y curl sysstat 
+RUN apk add procps sysstat
+COPY src/app /app
 
-WORKDIR /app/
+WORKDIR /app
 
-COPY conf/apache.conf /etc/supervisor/conf.d/
-COPY conf/nodejs.conf /etc/supervisor/conf.d/
+USER node
 
-COPY src/api /app
-COPY src/website /var/www/html
-
-RUN adduser --home /app --disabled-password --gecos "" bakdyr
-
-EXPOSE 80
-EXPOSE 42088
-
-CMD ["supervisord"]
+CMD [ "node", "app.js" ]

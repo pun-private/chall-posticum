@@ -3,6 +3,6 @@ version: '3'
 services:
     web:
         build : .
+        read_only: true
         ports:
-            - "42080:80"
-            - "42088:42088"
+            - "3000:3000"
