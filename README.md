@@ -1,4 +1,4 @@
-![Logo](src/website/favicon.ico)
+![Logo](src/app/static/favicon.ico)
 
 # Chall-Posticum
 
