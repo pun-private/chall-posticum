@@ -13,7 +13,7 @@ var getAll = function (selector, scope) {
 if (document.getElementsByClassName('demo').length > 0) {
   var i = 0;
   var done = false;
-  var txt = `curl http://YOURSERVER:42088/systemstats        `;
+  var txt = `curl http://YOURSERVER:3000/systemstats        `;
   var output = `          
 
   procs&nbsp;-----------memory----------&nbsp;---swap--&nbsp;-----io----&nbsp;-system--&nbsp;------cpu-----
